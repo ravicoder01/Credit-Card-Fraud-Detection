@@ -42,45 +42,57 @@ Place the file at:
 
 data/creditcard.csv
 
-🏗️ Project Pipeline
-Step	Description
-1	Data Loading & Exploration
-2	Feature Scaling (Amount)
-3	Train / Validation / Test Split (60/20/20)
-4	Logistic Regression with Class Weights
-5	Evaluation using Precision & Recall
-6	Threshold Tuning via Precision–Recall Curve
-7	Final Evaluation on Test Set
-⚙️ Technologies Used
-Category	Tools
-Language	Python
-Libraries	NumPy, Pandas, Scikit-learn
-Visualization	Matplotlib
-Model	Logistic Regression
-Evaluation	Precision, Recall, Confusion Matrix
-🧪 Data Preprocessing
-Task	Approach
-Missing Values	None present
-Feature Scaling	Standardization of Amount
-Feature Handling	PCA features + scaled amount
-Data Split	Stratified sampling
-🤖 Model Details
-Aspect	Choice
-Model	Logistic Regression
-Loss Function	Log Loss
-Regularization	L2
-Class Imbalance	class_weight='balanced'
-Output	Probability of fraud
-📈 Evaluation Strategy
+## 🏗️ Project Pipeline
 
-Due to extreme class imbalance, accuracy was avoided.
+| Step | Description |
+|------|------------|
+| 1 | Data Loading & Exploration |
+| 2 | Feature Scaling (`Amount`) |
+| 3 | Train / Validation / Test Split (60/20/20) |
+| 4 | Logistic Regression with Class Weights |
+| 5 | Evaluation using Precision & Recall |
+| 6 | Threshold Tuning via Precision–Recall Curve |
+| 7 | Final Evaluation on Test Set |
 
-Metric	Purpose
-Precision	Measures false alarms
-Recall	Measures missed fraud
-Confusion Matrix	Error analysis
-PR Curve	Threshold selection
-🎯 Threshold Tuning
+## ⚙️ Technologies Used
+
+| Category | Tools |
+|---------|------|
+| Language | Python |
+| Libraries | NumPy, Pandas, Scikit-learn |
+| Visualization | Matplotlib |
+| Model | Logistic Regression |
+| Evaluation | Precision, Recall, Confusion Matrix |
+
+## 🧪 Data Preprocessing
+
+| Task | Approach |
+|------|----------|
+| Missing Values | None present |
+| Feature Scaling | Standardization of `Amount` |
+| Feature Handling | PCA features + scaled amount |
+| Data Split | Stratified sampling |
+
+## 🤖 Model Details
+
+| Aspect | Choice |
+|-------|-------|
+| Model | Logistic Regression |
+| Loss Function | Log Loss |
+| Regularization | L2 |
+| Class Imbalance | `class_weight='balanced'` |
+| Output | Probability of fraud |
+
+## 📈 Evaluation Strategy
+
+Due to extreme class imbalance, **accuracy was avoided**.
+
+| Metric | Purpose |
+|--------|--------|
+| Precision | Measures false alarms |
+| Recall | Measures missed fraud |
+| Confusion Matrix | Error analysis |
+| PR Curve | Threshold selection |
 
 Default threshold (0.5) performed poorly
 
@@ -113,11 +125,13 @@ Threshold tuning is as important as model selection
 
 ML systems must be evaluated in a real-world context
 
-📂 Project Structure
+## 📂 Project Structure
+
+```
 credit-card-fraud-detection/
 │
 ├── data/
-│   └── creditcard.csv   (not included)
+│   └── creditcard.csv        # Dataset (not included due to size limit)
 │
 ├── notebooks/
 │   ├── 1_data_exploration.ipynb
@@ -127,7 +141,10 @@ credit-card-fraud-detection/
 │   └── 5_final_evaluation.ipynb
 │
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
+```
+
 
 ▶️ How to Run
 pip install -r requirements.txt
