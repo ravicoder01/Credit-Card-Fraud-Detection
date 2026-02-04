@@ -10,12 +10,15 @@ This project is inspired by the core ideas from Andrew Ng’s Machine Learning c
 Credit card fraud is a rare but costly event.
 The objective is to detect fraudulent transactions accurately while minimizing missed frauds, even when fraud cases account for less than 0.2% of all transactions.
 
-🧠 Key Challenges
-Challenge	Description
-Class Imbalance	Fraud ≈ 0.17% of total transactions
-Metric Selection	Accuracy is misleading
-Business Cost	Missing fraud is costlier than false alarms
-Decision Threshold	Default 0.5 threshold is suboptimal
+## 🧠 Key Challenges
+
+| Challenge | Description |
+|----------|-------------|
+| Extreme Class Imbalance | Fraud transactions represent ~0.17% of the dataset, making accuracy an unreliable metric |
+| Metric Selection | Accuracy gives misleading results; precision and recall are more meaningful |
+| False Negative Cost | Missing a fraud transaction leads to significant financial loss |
+| Threshold Selection | Default threshold (0.5) performs poorly for fraud d
+
 📊 Dataset
 
 Source: Kaggle – Credit Card Fraud Detection (European cardholders)
